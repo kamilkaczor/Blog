@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %} <h2>Editing post</h2>
+<form method="post">
+  <div id="edit" class="shadow-lg p-5 m-5 bg-white rounded">
+    <div class="col-md-12 p-5 m-5 "> {% csrf_token %} <div id="edit_entry" class="shadow-lg p-5 m-5 bg-white rounded">
+        <p>{{ form.as_p }}</p>
+      </div>
+      <button type="submit">Save</button>
+    </div>
+  </div>
+</form> {% endblock %}

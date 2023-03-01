@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %} <h2>Log In</h2>
+<form method="post">
+  <div id="drive" class="shadow-lg p-5 m-5 bg-white rounded"> Please fill your credentials to log in. <div class="col-md-12 p-5 m-5 "> {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Log In</button>
+    </div>
+    <p class="text-center">Don't have an account? <a href="{% url 'register' %}">Create an account</a>. </p>
+  </div>
+</form> {% endblock %}

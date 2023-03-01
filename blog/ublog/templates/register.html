@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% block content %} <h2>Registration </h2>
+<form method="post">
+  <div id="register" class="shadow-lg p-5 m-5 bg-white rounded"> Please fill your account data <div class="col-md-12 p-5 m-5 "> {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Create account</button>
+    </div>
+  </div>
+</form> {% endblock %}
